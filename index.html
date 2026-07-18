@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uday | Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Uday, a developer and designer specializing in professional, clean, and elegant web experiences.">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="theme-dark">
+  <!-- Floating Navigation -->
+  <header class="navbar-container">
+    <nav class="navbar">
+      <a href="#" class="nav-logo" id="nav-logo">
+        <span class="logo-main">UDAY KARTHIK</span>
+        <span class="logo-sub">AI & ROBOTICS ENGINEER</span>
+      </a>
+      <div class="nav-links">
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#certificates" class="nav-link">Certificates</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+        <span class="toggle-track">
+          <span class="toggle-slider"></span>
+        </span>
+        <span class="toggle-label" id="toggle-label">STEEL</span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main class="content-wrapper">
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-content">
+        <div class="hero-text-block animate-reveal">
+          <span class="hero-eyebrow">VIT CHENNAI | AI & ROBOTICS</span>
+          <h1 class="hero-title">C UDAY KARTHIK</h1>
+          <p class="hero-subtitle">
+            Pioneering digital solutions at the intersection of <span>intelligent AI systems</span> and <span>fluid
+              software design</span>.
+          </p>
+          <div class="hero-cta-wrapper">
+            <a href="#work" class="btn btn-primary">
+              Explore Projects
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+            <a href="#contact" class="btn btn-secondary">Let's Connect</a>
+          </div>
+        </div>
+        <div class="hero-visual-block animate-reveal delay-1">
+          <!-- Signature Element: Interactive Portrait -->
+          <div class="interactive-portrait-container" id="portrait-container">
+            <div class="portrait-frame base-frame"></div>
+            <div class="portrait-frame overlay-frame"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Section -->
+    <section class="work-section" id="work">
+      <div class="section-header animate-reveal">
+        <h2 class="section-title">Selected Work</h2>
+        <p class="section-subtitle">Realized projects exploring machine learning pipelines, network sockets, and web
+          products.</p>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all">All Projects</button>
+          <button class="filter-tab" data-filter="ai">AI & Systems</button>
+          <button class="filter-tab" data-filter="software">Software & Web</button>
+        </div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid animate-reveal">
+        <!-- Project 1 (AI) -->
+        <div class="project-card" data-category="ai">
+          <div class="project-thumbnail thumbnail-1">
+            <div class="thumbnail-overlay"></div>
+            <div class="project-tags">
+              <span class="project-tag">AI & ML</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">ASL Translator</h3>
+            <p class="project-desc">A desktop application utilizing YOLOv5 computer vision to translate American Sign
+              Language gestures in real-time via webcam feeds.</p>
+            <div class="project-tech">
+              <span>Java</span>
+              <span>YOLOv5</span>
+              <span>OpenCV</span>
+              <span>GUI</span>
+            </div>
+            <a href="#" class="project-link" aria-label="View ASL Translator Project">
+              <span>View Details</span>
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2 (Software) -->
+        <div class="project-card" data-category="software">
+          <div class="project-thumbnail thumbnail-2">
+            <div class="thumbnail-overlay"></div>
+            <div class="project-tags">
+              <span class="project-tag">Full-Stack</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Innaikum Karangal</h3>
+            <p class="project-desc">A food donation portal bridging surplus food supply (restaurants, homes) with local
+              shelters, featuring interactive map logistics.</p>
+            <div class="project-tech">
+              <span>React</span>
+              <span>Python</span>
+              <span>MongoDB</span>
+              <span>Google Maps</span>
+            </div>
+            <a href="#" class="project-link" aria-label="View Innaikum Karangal Project">
+              <span>View Details</span>
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3 (AI) -->
+        <div class="project-card" data-category="ai">
+          <div class="project-thumbnail thumbnail-3">
+            <div class="thumbnail-overlay"></div>
+            <div class="project-tags">
+              <span class="project-tag">Computer Vision / IoT</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Women Safety System</h3>
+            <p class="project-desc">An AI CCTV add-on running real-time surveillance threat detection (CNN) on ESP32,
+              triggering automatic location-based SOS warnings.</p>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>CNN</span>
+              <span>ESP32</span>
+              <span>Microcontroller</span>
+            </div>
+            <a href="#" class="project-link" aria-label="View Women Safety System Project">
+              <span>View Details</span>
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 4 (Software) -->
+        <div class="project-card" data-category="software">
+          <div class="project-thumbnail thumbnail-4">
+            <div class="thumbnail-overlay"></div>
+            <div class="project-tags">
+              <span class="project-tag">Networking</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Local ChatRoom Engine</h3>
+            <p class="project-desc">A secure local network chatroom built using socket programming, supporting
+              concurrent multi-clients and basic message encryption.</p>
+            <div class="project-tech">
+              <span>Java</span>
+              <span>Socket Programming</span>
+              <span>Cryptography</span>
+              <span>LAN/Wi-Fi</span>
+            </div>
+            <a href="#" class="project-link" aria-label="View Local ChatRoom Engine Project">
+              <span>View Details</span>
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About & Philosophy Section -->
+    <section class="about-section" id="about">
+      <div class="about-grid">
+        <!-- Philosophy Callout -->
+        <div class="about-philosophy animate-reveal">
+          <span class="section-eyebrow">MY PHILOSOPHY</span>
+          <blockquote class="philosophy-quote">
+            "Robotics gives body to intelligence; web technologies make it accessible. True engineering lies in making
+            both work seamlessly."
+          </blockquote>
+          <p class="philosophy-author">— Uday Karthik</p>
+        </div>
+
+        <!-- Detailed Bio & Tech Stack -->
+        <div class="about-details animate-reveal delay-1">
+          <h2 class="section-title">About Me</h2>
+          <p class="bio-text">
+            I am a passionate and innovative professional currently pursuing a B.Tech in Artificial Intelligence & Robotics, with expertise in AI solutions, web development, and digital media. I take pride in leading impactful projects that bridge technology and practical solutions, such as AI-driven safety systems and community-focused platforms. My collaborative skills enhance teamwork and foster creative ideas for real-world applications.
+          </p>
+
+          <div class="tech-stack-container">
+            <h3 class="tech-stack-title">Technical Skills</h3>
+            <div class="tech-groups">
+              <div class="tech-group">
+                <h4>Languages & AI Tools</h4>
+                <div class="tech-tags">
+                  <span class="tech-tag">JavaScript / Java</span>
+                  <span class="tech-tag">Python / C++</span>
+                  <span class="tech-tag">PyTorch / TensorFlow</span>
+                  <span class="tech-tag">YOLOv5 / CNN</span>
+                </div>
+              </div>
+              <div class="tech-group">
+                <h4>Web, DevOps & Platforms</h4>
+                <div class="tech-tags">
+                  <span class="tech-tag">React / Node.js</span>
+                  <span class="tech-tag">Express / MongoDB</span>
+                  <span class="tech-tag">Git / GitHub Actions</span>
+                  <span class="tech-tag">Figma / SQL</span>
+                  <span class="tech-tag">ESP32 / MATLAB</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Timeline Section -->
+    <section class="timeline-section" id="timeline">
+      <div class="section-header animate-reveal">
+        <span class="section-eyebrow">EXPERIENCE & EDUCATION</span>
+        <h2 class="section-title">Milestones</h2>
+      </div>
+
+      <div class="timeline animate-reveal">
+        <!-- Milestone 1: B.Tech AI & Robotics -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Aug 2023 - May 2027</span>
+            <h3 class="timeline-title">B.Tech in Artificial Intelligence & Robotics</h3>
+            <h4 class="timeline-company">VIT Chennai</h4>
+            <p class="timeline-desc">Acquiring advanced engineering foundations in machine learning models, neural networks, and robotics controllers. Maintained a CGPA of 8.16/10 (Sem 1 to 4).</p>
+          </div>
+        </div>
+
+        <!-- Milestone 2: Lead Marketing Strategist -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">12/2025</span>
+            <h3 class="timeline-title">Lead Marketing Strategist</h3>
+            <h4 class="timeline-company">Tantriks AI (Remote)</h4>
+            <p class="timeline-desc">Led marketing strategy and market positioning for an AI agency focused on agentic AI solutions. Conceptualized customer support AI agent use-cases, and translated business requirements into scalable AI agent architectures.</p>
+          </div>
+        </div>
+
+        <!-- Milestone 3: Freelance Front-end Developer -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">05/2025</span>
+            <h3 class="timeline-title">Front-end Developer</h3>
+            <h4 class="timeline-company">Freelance Front-end Developer (Remote)</h4>
+            <p class="timeline-desc">Designed responsive layout templates using Figma and developed client websites using clean, maintainable HTML, CSS, and JavaScript. Provided post-delivery support.</p>
+          </div>
+        </div>
+
+        <!-- Milestone 4: Digital Media Freelancer -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">02/2024 - 12/2024</span>
+            <h3 class="timeline-title">Digital Media Freelancer</h3>
+            <h4 class="timeline-company">Remote / Freelance</h4>
+            <p class="timeline-desc">Created digital marketing content, custom vector graphics, video promotions, and customized branding packages for local businesses.</p>
+          </div>
+        </div>
+
+        <!-- Milestone 5: Leader, BrainStorm Group -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">01/2023 - 12/2023</span>
+            <h3 class="timeline-title">Lead</h3>
+            <h4 class="timeline-company">BrainStorm Group (VIT Chennai)</h4>
+            <p class="timeline-desc">Founded and led a student group focused on innovative problem-solving. Directed brainstorming workshops, mentored members, and oversaw prototype development from idea to pitch.</p>
+          </div>
+        </div>
+
+        <!-- Milestone 6: Management Lead, Sports Club -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">01/2023 - 12/2023</span>
+            <h3 class="timeline-title">Management Lead</h3>
+            <h4 class="timeline-company">Sports Club (VIT Chennai)</h4>
+            <p class="timeline-desc">Planned and executed events, curated educational resources, and organized volunteer operations to drive active college student community engagement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section class="certificates-section" id="certificates">
+      <div class="section-header animate-reveal">
+        <span class="section-eyebrow">CREDENTIALS</span>
+        <h2 class="section-title">Certifications & Achievements</h2>
+      </div>
+
+      <div class="certificates-grid animate-reveal">
+        <!-- Certificate 1 -->
+        <div class="certificate-card">
+          <div class="certificate-icon">
+            <i data-lucide="award"></i>
+          </div>
+          <div class="certificate-info">
+            <span class="certificate-date">Sep 2024</span>
+            <h3 class="certificate-title">5G & 6G Hackathon</h3>
+            <h4 class="certificate-issuer">Ministry of Communications & TCOE India</h4>
+            <p class="certificate-desc">Awarded for participating as Team SAIU in the national 5G & 6G Hackathon
+              initiative from the Department of Telecommunications (Govt. of India).</p>
+          </div>
+        </div>
+
+        <!-- Certificate 2 -->
+        <div class="certificate-card">
+          <div class="certificate-icon">
+            <i data-lucide="award"></i>
+          </div>
+          <div class="certificate-info">
+            <span class="certificate-date">Nov 2025</span>
+            <h3 class="certificate-title">Plan for Entrepreneurial Activity</h3>
+            <h4 class="certificate-issuer">Cambridge University Press & Assessment</h4>
+            <p class="certificate-desc">Completed strategic planning coursework for startup consulting, focusing on
+              entrepreneurial frameworks and business analysis.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+      <div class="contact-grid">
+        <div class="contact-info-block animate-reveal">
+          <span class="section-eyebrow">GET IN TOUCH</span>
+          <h2 class="contact-title">Let's build something intelligent.</h2>
+          <p class="contact-desc">
+            Whether you want to discuss full-stack web products, computer vision setups, or digital media design, I'm
+            always open to connecting.
+          </p>
+          <div class="contact-details">
+            <a href="mailto:udaykarthik1204@gmail.com" class="contact-detail-link">
+              <i data-lucide="mail"></i>
+              <span>udaykarthik1204@gmail.com</span>
+            </a>
+            <a href="tel:+919123555456" class="contact-detail-link">
+              <i data-lucide="phone"></i>
+              <span>+91 91235-55456</span>
+            </a>
+            <div class="contact-detail-link">
+              <i data-lucide="map-pin"></i>
+              <span>Chennai, Tamil Nadu, India</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-block animate-reveal delay-1">
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-group">
+              <input type="text" id="name" name="name" required placeholder=" ">
+              <label for="name">Name</label>
+              <span class="form-line"></span>
+              <span class="error-msg" id="name-error">Name is required</span>
+            </div>
+
+            <div class="form-group">
+              <input type="email" id="email" name="email" required placeholder=" ">
+              <label for="email">Email</label>
+              <span class="form-line"></span>
+              <span class="error-msg" id="email-error">Please enter a valid email address</span>
+            </div>
+
+            <div class="form-group">
+              <textarea id="message" name="message" required placeholder=" " rows="4"></textarea>
+              <label for="message">Message</label>
+              <span class="form-line"></span>
+              <span class="error-msg" id="message-error">Message is required</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit-btn">
+              <span>Send Message</span>
+              <i data-lucide="send"></i>
+            </button>
+            <div class="form-feedback" id="form-feedback"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-container">
+    <div class="footer-content">
+      <p class="footer-copyright">&copy; 2026 C Uday Karthik. Crafted with design precision.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-link" aria-label="GitHub"><i data-lucide="github"></i></a>
+        <a href="#" class="social-link" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+        <a href="#" class="social-link" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+
+</html>
