@@ -223,24 +223,75 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================================================
-  // PORTRAIT HOVER REVEAL EFFECT
+  // CUSTOM CURSOR TRACKING WITH LAG INERTIA
   // ==========================================================================
-  const portraitContainer = document.getElementById('portrait-container');
-  const overlayFrame = portraitContainer ? portraitContainer.querySelector('.overlay-frame') : null;
+  const cursor = document.getElementById('custom-cursor');
+  const cursorGlow = document.getElementById('custom-cursor-glow');
 
-  if (portraitContainer && overlayFrame) {
-    portraitContainer.addEventListener('mousemove', (e) => {
-      const rect = portraitContainer.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
+  if (cursor && cursorGlow) {
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+    let glowX = mouseX;
+    let glowY = mouseY;
+
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
       
-      // Reveal alternate photo inside a circle centered at the mouse coordinates
-      overlayFrame.style.clipPath = `circle(80px at ${x}px ${y}px)`;
+      // Position center dot instantly
+      cursor.style.left = `${mouseX}px`;
+      cursor.style.top = `${mouseY}px`;
     });
 
-    portraitContainer.addEventListener('mouseleave', () => {
-      // Smoothly hide the overlay image when mouse leaves
-      overlayFrame.style.clipPath = 'circle(0px at 50% 50%)';
+    // Frame update loop for lag inertia glow
+    const updateCursorGlow = () => {
+      const easeFactor = 0.15; // lower value = more drag
+      glowX += (mouseX - glowX) * easeFactor;
+      glowY += (mouseY - glowY) * easeFactor;
+
+      cursorGlow.style.left = `${glowX}px`;
+      cursorGlow.style.top = `${glowY}px`;
+
+      requestAnimationFrame(updateCursorGlow);
+    };
+    updateCursorGlow();
+
+    // Hover scale expansions on interactive elements
+    const interactives = document.querySelectorAll('a, button, .project-card, .tech-tag, .timeline-item, .editorial-portrait, .theme-toggle, .filter-tab');
+    interactives.forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        cursor.style.width = '12px';
+        cursor.style.height = '12px';
+        cursor.style.backgroundColor = 'var(--text-color)';
+        
+        cursorGlow.style.width = '64px';
+        cursorGlow.style.height = '64px';
+        cursorGlow.style.borderColor = 'var(--text-color)';
+        cursorGlow.style.backgroundColor = 'rgba(var(--accent-rgb), 0.08)';
+      });
+
+      el.addEventListener('mouseleave', () => {
+        cursor.style.width = '8px';
+        cursor.style.height = '8px';
+        cursor.style.backgroundColor = 'var(--accent-color)';
+        
+        cursorGlow.style.width = '40px';
+        cursorGlow.style.height = '40px';
+        cursorGlow.style.borderColor = 'var(--accent-color)';
+        cursorGlow.style.backgroundColor = 'rgba(var(--accent-rgb), 0.03)';
+      });
+    });
+  }
+
+  // ==========================================================================
+  // PARALLAX BACKGROUND TYPOGRAPHY
+  // ==========================================================================
+  const bgText = document.getElementById('hero-bg-text');
+  if (bgText) {
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      // Slower scroll translation
+      bgText.style.transform = `translate(-50%, calc(-50% + ${scrollY * 0.35}px))`;
     });
   }
 });

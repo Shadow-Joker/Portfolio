@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Antonio:wght@700&family=Six+Caps&display=swap"
     rel="stylesheet">
 
   <!-- CSS -->
@@ -26,7 +26,7 @@
   <header class="navbar-container">
     <nav class="navbar">
       <a href="#" class="nav-logo" id="nav-logo">
-        <span class="logo-main">UDAY KARTHIK</span>
+        <span class="logo-main">C UDAY KARTHIK</span>
         <span class="logo-sub">AI & ROBOTICS ENGINEER</span>
       </a>
       <div class="nav-links">
@@ -46,30 +46,100 @@
 
   <!-- Main Content Wrapper -->
   <main class="content-wrapper">
-    <!-- Hero Section -->
-    <section class="hero-section" id="hero">
-      <div class="hero-content">
-        <div class="hero-text-block animate-reveal">
-          <span class="hero-eyebrow">VIT CHENNAI | AI & ROBOTICS</span>
-          <h1 class="hero-title">C UDAY KARTHIK</h1>
-          <p class="hero-subtitle">
-            Pioneering digital solutions at the intersection of <span>intelligent AI systems</span> and <span>fluid
-              software design</span>.
+    <!-- Fullscreen Editorial Hero Section -->
+    <section class="hero-editorial" id="hero">
+      <!-- Massive Background Typography Element -->
+      <div class="hero-bg-text" id="hero-bg-text">PORTFOLIO</div>
+      
+      <!-- Transparent Portrait image placed freely -->
+      <img src="assets/photo-color.jpg" class="editorial-portrait portrait-color animate-reveal delay-1" id="editorial-portrait-color" alt="C Uday Karthik">
+      <img src="assets/photo-bw.jpg" class="editorial-portrait portrait-bw animate-reveal delay-1" id="editorial-portrait-bw" alt="C Uday Karthik">
+      
+      <div class="hero-grid-12">
+        <!-- Left Panel: Profile introduction & bio -->
+        <div class="hero-left-panel animate-reveal">
+          <span class="hero-intro-eyebrow">Hello, I'm</span>
+          <h1 class="hero-intro-name">C UDAY KARTHIK</h1>
+          
+          <div class="hero-intro-roles">
+            <span class="role-item">Founder @ Tantriks AI</span>
+            <span class="role-item">AI Engineer</span>
+            <span class="role-item">Full Stack Developer</span>
+            <span class="role-item">Healthcare Technology Builder</span>
+          </div>
+          
+          <p class="hero-intro-desc">
+            Building intelligent software, AI products, Hospital Management Systems and scalable cloud applications.
           </p>
-          <div class="hero-cta-wrapper">
-            <a href="#work" class="btn btn-primary">
-              Explore Projects
-              <i data-lucide="arrow-up-right"></i>
-            </a>
-            <a href="#contact" class="btn btn-secondary">Let's Connect</a>
+          
+          <div class="hero-social-links">
+            <a href="https://github.com/udaykarthik1204" target="_blank" class="editorial-social-link">GitHub</a>
+            <a href="https://linkedin.com/in/uday-karthik" target="_blank" class="editorial-social-link">LinkedIn</a>
+            <a href="assets/resume.pdf" target="_blank" class="editorial-social-link">Resume</a>
+            <a href="mailto:udaykarthik1204@gmail.com" class="editorial-social-link">Email</a>
           </div>
         </div>
-        <div class="hero-visual-block animate-reveal delay-1">
-          <!-- Signature Element: Interactive Portrait -->
-          <div class="interactive-portrait-container" id="portrait-container">
-            <div class="portrait-frame base-frame"></div>
-            <div class="portrait-frame overlay-frame"></div>
+
+        <!-- Right Panel: Floating tags & navigation shortcuts -->
+        <div class="hero-right-panel animate-reveal delay-2">
+          <div class="floating-cards-container">
+            <div class="floating-card card-1">
+              <div class="card-title">AI</div>
+              <div class="card-subtitle">Engineer</div>
+            </div>
+            
+            <div class="floating-card card-2">
+              <div class="card-title">Founder</div>
+              <div class="card-subtitle">Tantriks AI</div>
+            </div>
+            
+            <div class="floating-card card-3">
+              <div class="card-title">Hospital</div>
+              <div class="card-subtitle">Management</div>
+              <div class="card-tag-desc">Systems</div>
+            </div>
+            
+            <div class="floating-card card-4">
+              <div class="card-title">Machine</div>
+              <div class="card-subtitle">Learning</div>
+            </div>
+            
+            <div class="floating-card card-5">
+              <div class="card-title">Cloud</div>
+              <div class="card-subtitle">Architecture</div>
+            </div>
           </div>
+
+          <div class="hero-section-indicators">
+            <a href="#work" class="section-indicator-link">
+              <span>Projects</span>
+              <i data-lucide="arrow-down-right"></i>
+            </a>
+            <a href="#about" class="section-indicator-link">
+              <span>Skills</span>
+              <i data-lucide="arrow-down-right"></i>
+            </a>
+            <a href="#timeline" class="section-indicator-link">
+              <span>Experience</span>
+              <i data-lucide="arrow-down-right"></i>
+            </a>
+            <a href="#certificates" class="section-indicator-link">
+              <span>Research</span>
+              <i data-lucide="arrow-down-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Editorial Divider and Navigation -->
+      <div class="hero-bottom-bar animate-reveal delay-3">
+        <div class="bottom-divider"></div>
+        <div class="bottom-nav">
+          <a href="#about" class="bottom-nav-link">About</a>
+          <a href="#work" class="bottom-nav-link">Projects</a>
+          <a href="#timeline" class="bottom-nav-link">Experience</a>
+          <a href="#certificates" class="bottom-nav-link">Research</a>
+          <a href="#contact" class="bottom-nav-link">Contact</a>
         </div>
       </div>
     </section>
@@ -418,7 +488,7 @@
   <!-- Footer -->
   <footer class="footer-container">
     <div class="footer-content">
-      <p class="footer-copyright">&copy; 2026 C Uday Karthik. Crafted with design precision.</p>
+      <p class="footer-copyright">&copy; 2026 C Uday Karthik.</p>
       <div class="footer-socials">
         <a href="#" class="social-link" aria-label="GitHub"><i data-lucide="github"></i></a>
         <a href="#" class="social-link" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
@@ -426,6 +496,10 @@
       </div>
     </div>
   </footer>
+
+  <!-- Custom cursor elements -->
+  <div class="custom-cursor" id="custom-cursor"></div>
+  <div class="custom-cursor-glow" id="custom-cursor-glow"></div>
 
   <!-- JS -->
   <script src="script.js"></script>
