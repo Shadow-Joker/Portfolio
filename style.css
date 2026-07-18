@@ -1655,6 +1655,14 @@ textarea:focus-visible {
     text-align: center;
   }
 
+  .role-item {
+    padding-left: 0;
+  }
+
+  .role-item::before {
+    display: none;
+  }
+
   .hero-intro-desc {
     max-width: 100%;
   }
@@ -1665,16 +1673,21 @@ textarea:focus-visible {
 
   .editorial-portrait {
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    transform: none;
     height: auto;
-    width: 80%;
+    width: 90%;
     max-width: 340px;
-    margin-top: 1.5rem;
-    margin-bottom: 2rem;
+    margin: 1.5rem auto 2.5rem auto;
     z-index: 5;
     order: -1;
     display: block;
+  }
+
+  .hero-bg-text {
+    font-size: clamp(5rem, 16vw, 8rem);
+    top: 25%;
+    opacity: 0.03;
   }
 
   .hero-right-panel {
