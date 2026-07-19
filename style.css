@@ -799,6 +799,19 @@ section {
   }
 }
 
+/* Hide custom cursor completely on mobile screens and touch devices */
+@media (max-width: 1024px), (hover: none), (pointer: coarse) {
+  .custom-cursor,
+  .custom-cursor-glow {
+    display: none !important;
+  }
+
+  body,
+  a, button, .project-card, .tech-tag, .timeline-item, .editorial-portrait, .theme-toggle, .filter-tab {
+    cursor: auto !important;
+  }
+}
+
 /* ==========================================================================
    WORK / PROJECTS SECTION
    ========================================================================== */
