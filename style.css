@@ -1454,9 +1454,11 @@ a.contact-detail-link:hover {
   color: var(--accent-color);
 }
 
-.social-link i {
+.social-link i,
+.social-link svg {
   width: 18px;
   height: 18px;
+  stroke: currentColor;
 }
 
 /* ==========================================================================
